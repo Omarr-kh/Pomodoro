@@ -31,14 +31,14 @@ def timer():
     long_break_seconds = LONG_BREAK_DURATION * 60
 
     if cycles_count % 8 == 0:
-        timer_label.config(text="BREAK")
+        timer_label.config(text="BREAK", fg="pink")
         count_down(long_break_seconds)
         cycles_count = 0
     elif cycles_count % 2 == 0:
-        timer_label.config(text="BREAK")
+        timer_label.config(text="BREAK", fg="pink")
         count_down(break_seconds)
     else:
-        timer_label.config(text="STUDY")
+        timer_label.config(text="STUDY", fg="darkgrey")
         count_down(study_seconds)
 
 
