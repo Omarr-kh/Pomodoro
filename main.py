@@ -1,5 +1,4 @@
 import tkinter as tk
-import time
 import math
 
 # Constants
@@ -65,6 +64,16 @@ window = tk.Tk()
 window.title("Pomodoro")
 window.config(padx=50, pady=50, bg=BG_COLOR)
 
+window_width = 450
+window_height = 500
+
+# Set the desired x and y positions
+x_position = 500
+y_position = 150
+
+# Use the geometry method to set the window's position and size
+window.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
+
 
 # Canvas
 canvas = tk.Canvas(width=200, height=224, bg=BG_COLOR,
@@ -91,11 +100,11 @@ marks_label.grid(column=1, row=3)
 
 # Buttons
 start_button = tk.Button(text="Start", command=timer, font=(
-    "arial", 10), highlightthickness=0)
+    "arial", 12, "bold"), padx=8, pady=3, borderwidth=3, highlightthickness=2, relief="flat", bg="#8C3333", fg="white")
 start_button.grid(column=0, row=2)
 
 reset_button = tk.Button(text="Reset", command=reset, font=(
-    "arial", 10), highlightthickness=0)
+    "arial", 12, "bold"), padx=8, pady=3, borderwidth=3, highlightthickness=2, relief="flat", bg="#8C3333", fg="white")
 reset_button.grid(column=2, row=2)
 
 window.mainloop()
