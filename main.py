@@ -18,6 +18,8 @@ def reset():
 
     window.after_cancel(window_timer)
     canvas.itemconfig(time_text, text="00:00")
+    timer_label.config(text="Timer", font=("courier", 45, "bold"),
+                       fg="#FFC436", bg=BG_COLOR)
     marks_label.config(text="")
 
 
